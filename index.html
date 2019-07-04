@@ -1,9 +1,9 @@
 <html>
     <head>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./styles/style.css">
         <script>
             function full()
             {
@@ -11,189 +11,6 @@
                 elem.requestFullscreen();
             }
         </script>
-
-        <style>
-            #header
-            {
-                width: 100%;
-                height: 150px;
-                background-image: url(./images/logo_roambee.png);
-                background-size: 200px;
-                background-repeat: no-repeat;
-                background-position: 25px 15px;
-            }
-
-            #container
-            {
-                width: 100%;
-            }
-
-            #piece-of-mind
-            {
-                width: 100%;
-            }
-
-            #footer
-            {
-                width: 100%;
-                height: 400px;
-                background-image: url(./images/logo_roambee.png);
-                background-size: 250px;
-                background-repeat: no-repeat;
-                background-position: 15px 225px;
-            }
-            
-            .dark-bg
-            {
-                background: #111112;
-            }
-
-            #footer-text
-            {
-                color:azure;
-                text-align: center;
-            }
-
-            h2
-            {
-                width: 100%;
-                text-align: center;
-                font-weight: bold;
-                margin: 50px 0px 50px 0px;
-                font-size: 60px;
-            }
-
-            h3
-            {
-                padding: 70px 40px 55px 40px;
-                margin:0px;
-            }
-
-
-            .title
-            {
-                width: 100%;
-                text-align: center;
-                color: #000;
-                font-size: 40px;
-                font-weight: bold;
-            }
-
-            #features
-            {
-                width: 100%;
-                height: 300px;
-                margin-bottom: 50px;
-                display: flex;
-                justify-content: center;    
-            }
-
-            #requirement-form
-            {
-                width: 100%;
-                background: #eee;
-            }
-
-            #form-container
-            {
-                background-color: #ffbd00;
-                padding-top: 40px;
-                clear: both;
-            }
-
-            .menu-item
-            {
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                height: 300px;
-                background: #eee;   
-                width: 20%;
-                float: left;
-                cursor: pointer;
-                margin: 0px;
-                border:none;
-                background-size: 100px;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-            .menu-item:checked
-            {
-                background-size: 100px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color: #ffbd00;
-            }
-            .menu-item:focus
-            {
-                background-size: 100px;
-                background-repeat: no-repeat;
-                background-position: center;
-                outline: none !important;
-            }
-            input[type=radio]
-            {
-                margin: 0px;   
-                border:0px;
-                outline: none;
-            }
-
-            .mode-of-tran-checkbox
-            {
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                height: 250px;
-                background: #eee;   
-                width: 250px;
-                cursor: pointer;
-                border:none;
-                background-size: 100px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color: #ffbd00;
-                box-shadow: 0px 0px 15px #333;
-                margin: 0px 25px 0px 25px !important;
-            }
-            .mode-of-tran-checkbox:checked
-            {
-                background-color: #eee;
-            }
-
-            .feature-box
-            {
-                width: 360px;
-                height: 200px;
-                float: left;
-                list-style-type: none;
-                background-size: 200px !important;
-                font-size: 23px;
-                text-align: center;
-                font-weight: bold;
-                padding-top: 220px;
-                background-position: center !important;
-            }
-
-            .carousel
-            {
-                display: none;
-            }
-
-            .label-caption
-            {
-                position: absolute;
-                width: 100%;
-                bottom: 0px;
-            }
-            .label-caption label{
-                display: block;
-                width: 20%;
-                float: left;
-                text-align: center;
-            }
-            
-
-        </style>
     </head>
     <body>
         <div id='header' class='dark-bg' onclick="full()"></div>
@@ -201,13 +18,13 @@
             <div id='piece-of-mind'>
                 <h2>Can you put a price on peace of mind?</h2>
                 <div id="features">
-                    <div class='feature-box' style="background-image: url('./images/Pay As You Go Model.png'); background-repeat:no-repeat">
+                    <div class='feature-box' style="background-image: url('./images/Pay As You Go Model.png');">
                         Pay-as-you-go Model
                     </div>
-                    <div class='feature-box' style="background:url('./images/No Hidden Expenses.png'); background-repeat:no-repeat">
+                    <div class='feature-box' style="background-image:url('./images/No Hidden Expenses.png');">
                         No Hidden Expenses
                     </div>
-                    <div class='feature-box' style="background:url('./images/Device Pickup Support.png'); background-repeat:no-repeat">
+                    <div class='feature-box' style="background-image:url('./images/Device Pickup Support.png');">
                         Device Pickup Support
                     </div>
                 </div>
@@ -221,26 +38,37 @@
                     <input id="inv_mon"  type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Inventory Monitoring.png');">
                     <input id="ret_asst_mon" type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Returnable Asset Monitoring.png');">
                     <input id="field_asst_mon" type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Field Asset Monitoring.png');">
-                    <input id="other" type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Other.png');">        
-
-                   <br>
-                   <label class="caption1">test 1</label>
-                   <label class="caption1">test 1</label>
-                   <label class="caption1">test 1</label>
-                   <label class="caption1">test 1</label>
-                   <label class="caption1">test 1</label>
-                            
-                    
+                    <input id="other" type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Other.png');">                
             </div>
+            <div class="caption-bar">
+                    <label class="caption1">Shipment Monitoring</label>
+                    <label class="caption1">Inventory Monitoring</label>
+                    <label class="caption1">Returnable Assset Monitoring</label>
+                    <label class="caption1">Field Asset Monitoring</label>
+                    <label class="caption1">Others</label>
+            </div>
+
+            <div style="clear:both"></div>
             
             <div id="form-container">
                 <h3 class="title" style="line-height: 65px;">Great, you are here to monitor your Shipments! <br>What is your most preferred mode/s of shipment?</h3>                
                 <div  style="display: flex; justify-content: center;">
-                        <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="road" style="background-image: url('./images/');">
-                        <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="rail">
-                        <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="ocean">
-                        <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="air">
+                        <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="road" style="background-image: url('./images/Road.png');">
+                        <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="rail" style="background-image: url('./images/Rail.png');">
+                        <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="ocean" style="background-image: url('./images/Ocean.png');">
+                        <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="air" style="background-position:center 50px; background-image: url('./images/Air.png');">
                 </div>
+                <div style="width: 100%;display: flex;justify-content: center;position: absolute;top: 1680px;">
+                    <label class="caption2">ROAD</label>
+                    <label class="caption2">RAIL</label>
+                    <label class="caption2">OCEAN</label>
+                    <label class="caption2">AIR</label>
+                </div>
+
+                <div style="display: flex; justify-content: center;">
+                        <button id="next-button">Next</button>
+                </div>
+                
             </div>
             
 
@@ -253,38 +81,38 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class='carousel-content'>
-                                 <span class='carousel-title carousel-text'>Still want to talk about numbers</span><br>
-                                <span class='carousel-mesg carousel-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis hendrerit mollis.Curabitur eu magna at felis imperdiet facilisis sed ac nisi. Praesent pellentesque antesit amet luctus porttitor. Nulla in nunc ut lacus interdum molestie. Nam mattisconsequat nibh feugiat posuere. Nulla facilisis urna non odio venenatis ultrices.</span><br>
-                                <span class='carousel-author carousel-text'>John Doe<br>Manager XYZ corporation</span>
+                                <div class='carousel-title carousel-text'>Still want to talk about numbers?</div>
+                                <div class='carousel-mesg carousel-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis hendrerit mollis.Curabitur eu magna at felis imperdiet facilisis sed ac nisi. Praesent pellentesque antesit amet luctus porttitor. Nulla in nunc ut lacus interdum molestie. Nam mattisconsequat nibh feugiat posuere. Nulla facilisis urna non odio venenatis ultrices.</div>
+                                <div class='carousel-author carousel-text'>John Doe<br>Manager XYZ corporation</div>
                             </div>
                         </div>
                         <div class="item">
                             <div class='carousel-content'>
-                                    <span class='carousel-title carousel-text'>Still want to talk about numbers</span><br>
-                                    <span class='carousel-mesg carousel-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span><br>
-                                    <span class='carousel-author carousel-text'>John Doe<br>Manager XYZ corporation</span>
+                                    <div class='carousel-title carousel-text'>Still want to talk about numbers</div>
+                                    <div class='carousel-mesg carousel-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis hendrerit mollis.Curabitur eu magna at felis imperdiet facilisis sed ac nisi. Praesent pellentesque antesit amet luctus porttitor. Nulla in nunc ut lacus interdum molestie. Nam mattisconsequat nibh feugiat posuere. Nulla facilisis urna non odio venenatis ultrices.</div>
+                                    <div class='carousel-author carousel-text'>John Doe<br>Manager XYZ corporation</div>
                             </div>
                         </div>
                         <div class="item">
                             <div class='carousel-content'>
-                                    <span class='carousel-title carousel-text'>Still want to talk about numbers</span><br>
-                                    <span class='carousel-mesg carousel-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span><br>
-                                    <span class='carousel-author carousel-text'>John Doe<br>Manager XYZ corporation</span>
+                                    <div class='carousel-title carousel-text'>Still want to talk about numbers</div>
+                                    <div class='carousel-mesg carousel-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis hendrerit mollis.Curabitur eu magna at felis imperdiet facilisis sed ac nisi. Praesent pellentesque antesit amet luctus porttitor. Nulla in nunc ut lacus interdum molestie. Nam mattisconsequat nibh feugiat posuere. Nulla facilisis urna non odio venenatis ultrices.</div>
+                                    <div class='carousel-author carousel-text'>John Doe<br>Manager XYZ corporation</div>
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control left" href="#DemoCarousel" data-slide="prev" style="background: none;">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    <a class="carousel-control left left-arrow" href="#DemoCarousel" data-slide="prev">
+                        <div id="left-arrow"></div>
                     </a>
-                    <a class="carousel-control right" href="#DemoCarousel" data-slide="next" style="background: none;">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    <a class="carousel-control right" href="#DemoCarousel" data-slide="next">
+                        <div id="right-arrow"></div>
                     </a>
             </div>
 
         </div>
         <div id='footer' class='dark-bg'>
             <span id="footer-text">
-                    &copy; 2018 Roambee Corporation. All Rights Reserved. <br> Sitemap | Terms & Conditions | Privacy Policy</span>
+                    &copy; 2018 Roambee Corporation. All Rights Reserved. <br>&nbsp; &nbsp; Sitemap | Terms & Conditions | Privacy Policy</span>
             </span>
         </div>
     </body>

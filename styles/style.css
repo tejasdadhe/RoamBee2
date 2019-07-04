@@ -1,0 +1,285 @@
+#header
+{
+    width: 100%;
+    height: 150px;
+    background-image: url(../images/logo_roambee.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: 25px 15px;
+}
+
+#container
+{
+    width: 100%;
+}
+
+#piece-of-mind
+{
+    width: 100%;
+}
+
+#footer
+{
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/logo_roambee.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: 50px 235px;
+    padding: 270px 0px 0px 270px;
+    font-size: 25px;
+}
+
+.dark-bg
+{
+    background: #111112;
+}
+
+#footer-text
+{
+    color:azure;
+    text-align: center;
+}
+
+h2
+{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin: 50px 0px 50px 0px;
+    font-size: 60px;
+}
+
+h3
+{
+    padding: 70px 40px 55px 40px;
+    margin:0px;
+}
+
+
+.title
+{
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#features
+{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;    
+}
+
+#requirement-form
+{
+    width: 100%;
+    background: #eee;
+}
+
+#form-container
+{
+    background-color: #ffbd00;
+    padding-top: 40px;
+    clear: both;
+}
+
+.menu-item
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 300px;
+    background: #eee;   
+    width: 20%;
+    float: left;
+    cursor: pointer;
+    margin: 0px;
+    border:none;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center 60px;;
+}
+.menu-item:checked
+{
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center 60px;;
+    background-color: #ffbd00;
+}
+.menu-item:focus
+{
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center 60px;;
+    outline: none !important;
+}
+input[type=radio]
+{
+    margin: 0px;   
+    border:0px;
+    outline: none;
+}
+
+
+.caption2
+{
+    width: 250px;
+    margin: 0px 25px 0px 25px !important;
+    text-align: center;
+    font-size: 25px;
+}
+
+.mode-of-tran-checkbox
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 270px;
+    background: #eee;
+    width: 250px;
+    cursor: pointer;
+    border: none;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center 75px;
+    background-color: #ffbd00;
+    box-shadow: 0px 0px 15px #333;
+    margin: 0px 25px 0px 25px !important;
+    background-size: 135px;
+    outline: none !important;
+}
+.mode-of-tran-checkbox:checked
+{
+    background-color: #eee;
+}
+
+.feature-box
+{
+    width: 360px;
+    height: 200px;
+    float: left;
+    list-style-type: none;
+    background-size: 200px !important;
+    font-size: 23px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 220px;
+    background-position: center !important;
+    background-repeat:no-repeat
+}
+
+.label-caption
+{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+.label-caption label{
+    display: block;
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+#next-button
+{
+    margin: 60px 0px 100px 0px;
+    background: #000;
+    color: #fff;
+    width: 300px;
+    height: 45px;
+    font-size: 25px;
+    outline: none;
+    border: none;
+}
+
+.carousel-content
+{
+    margin: 0px auto;
+    text-align: center;
+    width: 1000px;
+    padding-top: 50px;
+}
+.carousel-title
+{
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.carousel-mesg
+{
+    font-size:25px;
+    margin-top:25px;
+    line-height: 30px;
+}
+
+.carousel-text
+{
+
+}
+
+.icon-next
+{
+    background: #000;
+}
+
+.carousel-author
+{
+    font-size: 25px;
+    margin-top: 35px;
+    margin-bottom: 65px;
+    font-weight: bold;
+}
+.carousel-indicators li { visibility: hidden; }
+#left-arrow
+{
+    background: #000;
+}
+
+
+.carousel-control.left
+{
+    background-image: url(../images/arrow.png) !important;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 80px 200px;
+    opacity: 1;
+}
+
+.carousel-control.right
+{
+    background-image: url(../images/arrow.png) !important;
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 80px 200px;
+    opacity: 1;
+}
+
+
+
+.caption1
+{
+    width: 20%;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: normal;
+    padding: 0 35px 0 35px;
+    pointer-events: none;
+}
+
+.caption-bar
+{
+    position: absolute;
+    width: 100%;
+    top: 1075px;
+    font-size: 25px;
+}
