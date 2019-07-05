@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $.ajax({
+                    url: "http://13.126.190.115:3000/fetchData",
+                    dataType: 'json',
+                    type: 'get',
+                    cache:false,
+                    success: function(data){
+                        console.log(data);
+                        var event_data = '';
+                        $.each(data.result, function(index, value){
+                            /*console.log(value);*/
+                            event_data += '<tr>';
+                            event_data += '<td>'+value.id+'</td>';
+                            event_data += '<td>'+value.firstName+'</td>';
+                            event_data += '<td>'+value.lastName+'</td>';
+                            event_data += '<td>'+value.emailId+'</td>';
+                            event_data += '<td>'+value.contactNumber+'</td>';
+                            event_data += '<td>'+value.areaOfInterest+'</td>';
+                            event_data += '<td>'+value.modeOfTransport+'</td>';
+                            event_data += '<td>'+value.blogSub+'</td>';
+                            event_data += '<td>'+value.marketingSub+'</td>';
+                            event_data += '</tr>';
+                        });
+                        $("#list_table_json").append(event_data);
+                    },
+                    error: function(d){
+                        /*console.log("error");*/
+                        alert("404. Please wait until the File is Loaded.");
+                    }
+                });
+            });
+            </script>
+    </head>
+    <body>
+            <table class="table table-striped" id="list_table_json">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Company-email-ID</th>
+                            <th>Phone Number</th>
+                            <th>Area of Interest</th>
+                            <th>Mode Of Transport</th>
+                            <th>Blog SubScription <br>(1=Yes/ 0=No)</th>
+                            <th>Marketing emails Subscription<br> (1=Yes/ 0=No)</th>                  
+                        </tr>                   
+                    </thead>
+                </table>
+    </body>
+</html>

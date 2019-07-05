@@ -79,6 +79,7 @@ function showThankyouMessage()
     form2.style.display = 'none';
     form3.style.display = 'block';
 
+    form3.scrollIntoView();
 }
 
 function hideMenu()
