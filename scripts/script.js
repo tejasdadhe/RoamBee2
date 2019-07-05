@@ -55,7 +55,7 @@ function sendData()
 
     var xhttp = new XMLHttpRequest();  
     xhttp.onreadystatechange = showThankyouMessage;
-    xhttp.open("POST", "http://13.126.190.115/:3000/saveData", true);
+    xhttp.open("POST", "http://13.126.190.115:3000/saveData", true);
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhttp.send(JSON.stringify(PostData));
 
