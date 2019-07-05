@@ -52,33 +52,33 @@ function sendData()
     PostData.marketing_subscription = getCheckBoxValue('marketing_sub');
     
     console.log("Post Data %j",PostData);
+
+    var xhttp = new XMLHttpRequest();  
+    xhttp.onreadystatechange = showThankyouMessage;
+    xhttp.open("POST", "http://13.126.190.115/:3000/saveData", true);
+    xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhttp.send(JSON.stringify(PostData));
+
+
+
+
     //post('./saveData.php', {'data': PostData});
 }
-
-function post(path, params, method='post') {
-    const form = document.createElement('form');
-    form.method = method;
-    form.action = path;
-  
-    for (const key in params) {
-      if (params.hasOwnProperty(key)) {
-        const hiddenField = document.createElement('input');
-        hiddenField.type = 'hidden';
-        hiddenField.name = key;
-        hiddenField.value = params[key];
-  
-        form.appendChild(hiddenField);
-      }
-    }
-  
-    document.body.appendChild(form);
-    form.submit();
-  }
 
 function showMenu()
 {
     const form_container = document.getElementById("form-container");
     form_container.style.display = "block";
+}
+
+function showThankyouMessage()
+{
+    const form2 = document.getElementById('form-page-2');
+    const form3 = document.getElementById('form-page-3');
+
+    form2.style.display = 'none';
+    form3.style.display = 'block';
+
 }
 
 function hideMenu()
