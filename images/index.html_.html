@@ -1,0 +1,157 @@
+
+<!-- saved from url=(0063)file:///Users/tejasdadhe/Desktop/WorkSpace/RoamBee2/index.html? -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <script src="./index.html__files/jquery.min.js"></script>
+        <script src="./index.html__files/bootstrap.min.js"></script>
+        <script src="file:///Users/tejasdadhe/Desktop/WorkSpace/RoamBee2/scripts/script.js"></script>
+
+        <link rel="stylesheet" href="./index.html__files/bootstrap.min.css">
+        <link rel="stylesheet" href="file:///Users/tejasdadhe/Desktop/WorkSpace/RoamBee2/styles/style.css">
+        <script>
+            function full()
+            {
+                var elem = document.documentElement;
+                elem.requestFullscreen();
+            }
+        </script>
+    </head>
+    <body>
+        <div id="header" class="dark-bg" onclick="full()"></div>
+        <div id="container">
+            <div id="piece-of-mind">
+                <h2>Can you put a price on peace of mind?</h2>
+                <div id="features">
+                    <div class="feature-box" style="background-image: url(&#39;./images/Pay As You Go Model.png&#39;);">
+                        Pay-as-you-go Model
+                    </div>
+                    <div class="feature-box" style="background-image:url(&#39;./images/No Hidden Expenses.png&#39;);">
+                        No Hidden Expenses
+                    </div>
+                    <div class="feature-box" style="background-image:url(&#39;./images/Device Pickup Support.png&#39;);">
+                        Device Pickup Support
+                    </div>
+                </div>
+            </div>
+            <div id="requirement-form">
+                <h3 class="title">Select your area of requirement<br>and we shall manifest an exclusive solution for you!</h3>    
+            </div>
+            <div>
+                    <input onclick="showMenu()" id="ship_mon" value="0" type="radio" class="menu-item" name="area_of_interest" style="background-image:url(&#39;./images/Shipment Monitoring.png&#39;);">
+                    <input onclick="hideMenu()" id="inv_mon" value="1" type="radio" class="menu-item" name="area_of_interest" style="background-image:url(&#39;./images/Inventory Monitoring.png&#39;);">
+                    <input onclick="hideMenu()" id="ret_asst_mon" value="2" type="radio" class="menu-item" name="area_of_interest" style="background-image:url(&#39;./images/Returnable Asset Monitoring.png&#39;);">
+                    <input onclick="hideMenu()" id="field_asst_mon" value="3" type="radio" class="menu-item" name="area_of_interest" style="background-image:url(&#39;./images/Field Asset Monitoring.png&#39;);">
+                    <input onclick="hideMenu()" id="other" value="4" type="radio" class="menu-item" name="area_of_interest" style="background-image:url(&#39;./images/Other.png&#39;);">                
+            </div>
+            <div class="caption-bar">
+                    <label class="caption1">Shipment Monitoring</label>
+                    <label class="caption1">Inventory Monitoring</label>
+                    <label class="caption1">Returnable Assset Monitoring</label>
+                    <label class="caption1">Field Asset Monitoring</label>
+                    <label class="caption1">Others</label>
+            </div>
+            <div style="clear:both"></div>
+
+            <div id="form-container" action="a.php" method="GET" style="display: block;">
+                <div id="form-page-1" style="display: none;">
+                    <h3 class="title" style="line-height: 65px;">Great, you are here to monitor your Shipments! <br>What is your most preferred mode/s of shipment?</h3>                
+                    <div style="display: flex; justify-content: center;">
+                            <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="road" style="background-image: url(&#39;./images/Road.png&#39;);">
+                            <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="rail" style="background-image: url(&#39;./images/Rail.png&#39;);">
+                            <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="ocean" style="background-image: url(&#39;./images/Ocean.png&#39;);">
+                            <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="air" style="background-position:center 50px; background-image: url(&#39;./images/Air.png&#39;);">
+                    </div>
+                    <div style="width: 100%;display: flex;justify-content: center;position: absolute;top: 1680px;">
+                        <label class="caption2" value="0">ROAD</label>
+                        <label class="caption2" value="1">RAIL</label>
+                        <label class="caption2" value="2">OCEAN</label>
+                        <label class="caption2" value="3">AIR</label>
+                    </div>
+
+                    <div style="display: flex; justify-content: center;">
+                            <button type="button" class="form-button" onclick="openXontactDetailsForm()">Next</button>
+                    </div>
+                </div>
+                <div id="form-page-2" style="display: block;">
+                        <h3 class="title">We are almost there,<br>Please share your contact details for us to reach out to you</h3>
+                        <table id="contact-details">
+                            <tbody><tr>
+                                <td><label class="form-label">First Name*</label><br><input type="text" class="half-width-input" id="fname"></td>
+                                <td><label class="form-label">Last Name*</label><br><input type="text" class="half-width-input" id="lname"></td>
+                            </tr>
+                            <tr>
+                                <td><label class="form-label">Company e-mail ID*</label><br><input type="text" class="half-width-input" id="email"></td>
+                                <td><label class="form-label">Contact Number*</label><br><input type="text" class="half-width-input" id="contact_num"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label class="form-label">What do you want to achieve from this integration?</label><br>
+                                    <input class="full-width-input">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div>
+                                        <input type="checkbox" id="blog_sub" class="form-checkbox"><label class="form-label">Subscribe to Roambee's Blog</label>
+                                    </div>    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div>
+                                            <input type="checkbox" id="marketing_sub" class="form-checkbox" style="margin-bottom: 5px !important;"><label class="form-label">By checking his box, I agree to recieve marketing communications from Roambee.<br>I am aware that I can unsubscribe at any time.<a> (Privacy Policy)</a></label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <div style="display: flex; justify-content: center;">
+                                <button type="button" class="form-button" style="margin: 10px 0px 50px 0px;">Submit</button>
+                        </div>
+                </div>
+                
+            </div>
+            
+
+            <div id="DemoCarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#DemoCarousel" data-slide-to="0" class=""></li>
+                        <li data-target="#DemoCarousel" data-slide-to="1" class="active"></li>
+                        <li data-target="#DemoCarousel" data-slide-to="2" class=""></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item">
+                            <div class="carousel-content">
+                                <div class="carousel-title carousel-text">Still want to talk about numbers?</div>
+                                <div class="carousel-mesg carousel-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis hendrerit mollis.Curabitur eu magna at felis imperdiet facilisis sed ac nisi. Praesent pellentesque antesit amet luctus porttitor. Nulla in nunc ut lacus interdum molestie. Nam mattisconsequat nibh feugiat posuere. Nulla facilisis urna non odio venenatis ultrices.</div>
+                                <div class="carousel-author carousel-text">John Doe<br>Manager XYZ corporation</div>
+                            </div>
+                        </div>
+                        <div class="item active">
+                            <div class="carousel-content">
+                                    <div class="carousel-title carousel-text">Still want to talk about numbers</div>
+                                    <div class="carousel-mesg carousel-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis hendrerit mollis.Curabitur eu magna at felis imperdiet facilisis sed ac nisi. Praesent pellentesque antesit amet luctus porttitor. Nulla in nunc ut lacus interdum molestie. Nam mattisconsequat nibh feugiat posuere. Nulla facilisis urna non odio venenatis ultrices.</div>
+                                    <div class="carousel-author carousel-text">John Doe<br>Manager XYZ corporation</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="carousel-content">
+                                    <div class="carousel-title carousel-text">Still want to talk about numbers</div>
+                                    <div class="carousel-mesg carousel-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis hendrerit mollis.Curabitur eu magna at felis imperdiet facilisis sed ac nisi. Praesent pellentesque antesit amet luctus porttitor. Nulla in nunc ut lacus interdum molestie. Nam mattisconsequat nibh feugiat posuere. Nulla facilisis urna non odio venenatis ultrices.</div>
+                                    <div class="carousel-author carousel-text">John Doe<br>Manager XYZ corporation</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control left left-arrow" href="file:///Users/tejasdadhe/Desktop/WorkSpace/RoamBee2/index.html?#DemoCarousel" data-slide="prev">
+                        <div id="left-arrow"></div>
+                    </a>
+                    <a class="carousel-control right" href="file:///Users/tejasdadhe/Desktop/WorkSpace/RoamBee2/index.html?#DemoCarousel" data-slide="next">
+                        <div id="right-arrow"></div>
+                    </a>
+            </div>
+        </div>
+        <div id="footer" class="dark-bg">
+            <span id="footer-text">
+                    © 2018 Roambee Corporation. All Rights Reserved. <br>&nbsp; &nbsp; Sitemap | Terms &amp; Conditions | Privacy Policy</span>
+            
+        </div>
+    
+</body></html>

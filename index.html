@@ -2,6 +2,8 @@
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="./scripts/script.js"></script>
+
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="./styles/style.css">
         <script>
@@ -29,16 +31,15 @@
                     </div>
                 </div>
             </div>
-
             <div id="requirement-form">
                 <h3 class='title'>Select your area of requirement<br>and we shall manifest an exclusive solution for you!</h3>    
             </div>
             <div>
-                    <input id="ship_mon" type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Shipment Monitoring.png');">
-                    <input id="inv_mon"  type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Inventory Monitoring.png');">
-                    <input id="ret_asst_mon" type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Returnable Asset Monitoring.png');">
-                    <input id="field_asst_mon" type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Field Asset Monitoring.png');">
-                    <input id="other" type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Other.png');">                
+                    <input onclick="showMenu()" id="ship_mon" value=0 type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Multimodal-Shipment-Tracking.png');">
+                    <input onclick="hideMenu()" id="inv_mon" value=1 type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Inventory Monitoring.png');">
+                    <input onclick="hideMenu()" id="ret_asst_mon" value=2 type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Returnable Asset Monitoring.png');">
+                    <input onclick="hideMenu()" id="field_asst_mon" value=3 type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Field Asset Monitoring.png');">
+                    <input onclick="hideMenu()" id="other" value=4 type="radio" class='menu-item' name='area_of_interest' style="background-image:url('./images/Other.png');">                
             </div>
             <div class="caption-bar">
                     <label class="caption1">Shipment Monitoring</label>
@@ -47,26 +48,63 @@
                     <label class="caption1">Field Asset Monitoring</label>
                     <label class="caption1">Others</label>
             </div>
-
             <div style="clear:both"></div>
-            
-            <div id="form-container">
-                <h3 class="title" style="line-height: 65px;">Great, you are here to monitor your Shipments! <br>What is your most preferred mode/s of shipment?</h3>                
-                <div  style="display: flex; justify-content: center;">
-                        <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="road" style="background-image: url('./images/Road.png');">
-                        <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="rail" style="background-image: url('./images/Rail.png');">
-                        <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="ocean" style="background-image: url('./images/Ocean.png');">
-                        <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="air" style="background-position:center 50px; background-image: url('./images/Air.png');">
-                </div>
-                <div style="width: 100%;display: flex;justify-content: center;position: absolute;top: 1680px;">
-                    <label class="caption2">ROAD</label>
-                    <label class="caption2">RAIL</label>
-                    <label class="caption2">OCEAN</label>
-                    <label class="caption2">AIR</label>
-                </div>
 
-                <div style="display: flex; justify-content: center;">
-                        <button id="next-button">Next</button>
+            <div id="form-container" action="a.php" method="GET">
+                <div id="form-page-1" style="display:block">
+                    <h3 class="title" style="line-height: 65px;">Great, you are here to monitor your Shipments! <br>What is your most preferred mode/s of shipment?</h3>                
+                    <div  style="display: flex; justify-content: center;">
+                            <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="road" style="background-image: url('./images/Road.png');">
+                            <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="rail" style="background-image: url('./images/Rail.png');">
+                            <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="ocean" style="background-image: url('./images/Ocean.png');">
+                            <input type="checkbox" class="mode-of-tran-checkbox" name="vehicle1" value="air" style="background-position:center 50px; background-image: url('./images/Air.png');">
+                    </div>
+                    <div style="width: 100%;display: flex;justify-content: center;position: absolute;top: 1680px;">
+                        <label class="caption2" value=0>ROAD</label>
+                        <label class="caption2" value=1>RAIL</label>
+                        <label class="caption2" value=2>OCEAN</label>
+                        <label class="caption2" value=3>AIR</label>
+                    </div>
+
+                    <div style="display: flex; justify-content: center;">
+                            <button type="button" class="form-button" onclick="openXontactDetailsForm()">Next</button>
+                    </div>
+                </div>
+                <div id="form-page-2" style="display:none">
+                        <h3 class="title">We are almost there,<br>Please share your contact details for us to reach out to you</h3>
+                        <table id="contact-details">
+                            <tr>
+                                <td><label class="form-label">First Name*</label><br><input type='text' class="half-width-input" id='fname'></td>
+                                <td><label class="form-label">Last Name*</label><br><input type='text' class="half-width-input" id='lname'></td>
+                            </tr>
+                            <tr>
+                                <td><label class="form-label">Company e-mail ID*</label><br><input type="email" class="half-width-input" id='email'></td>
+                                <td><label class="form-label">Contact Number*</label><br><input type='number' class="half-width-input" id='contact_num'></td>
+                            </tr>
+                            <tr>
+                                <td colspan=2>
+                                    <label class="form-label">What do you want to achieve from this integration?</label><br>
+                                    <input class="full-width-input" id="message">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan=2>
+                                    <div>
+                                        <input type="checkbox" id="blog_sub" class="form-checkbox"><label class="form-label">Subscribe to Roambee's Blog</label>
+                                    </div>    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan=2>
+                                    <div>
+                                            <input type="checkbox" id="marketing_sub" class="form-checkbox" style="margin-bottom: 5px !important;"><label class="form-label">By checking his box, I agree to recieve marketing communications from Roambee.<br>I am aware that I can unsubscribe at any time.<a> (Privacy Policy)</a></label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="display: flex; justify-content: center;">
+                                <button type=button onclick="sendData()" class="form-button" style="margin: 10px 0px 50px 0px;">Submit</button>
+                        </div>
                 </div>
                 
             </div>
@@ -108,7 +146,6 @@
                         <div id="right-arrow"></div>
                     </a>
             </div>
-
         </div>
         <div id='footer' class='dark-bg'>
             <span id="footer-text">
